@@ -6,7 +6,7 @@ public class Test : MonoBehaviour {
     public GameObject Sun;
 	// Use this for initialization
 	void Start () {
-		
+		//test;
 	}
 	
 	// Update is called once per frame
