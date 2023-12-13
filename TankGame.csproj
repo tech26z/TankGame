@@ -237,9 +237,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EarthMove.cs" />
     <Compile Include="Assets\Scripts\MyTank.cs" />
+    <Compile Include="Assets\Scripts\OldFile\TestMove.cs" />
+    <Compile Include="Assets\Scripts\OldFile\TransformClass.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
-    <Compile Include="Assets\Scripts\TestMove.cs" />
-    <Compile Include="Assets\Scripts\TransformClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
