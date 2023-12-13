@@ -10,7 +10,8 @@ planet will follow the axis and stay in the same revolving plane.
 Can't use this fbx file because it will incure a large file. The file itself is 45M, but when pushs
 it to Github, it generates a big file warning message
 
-![image]
+![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic10.jpg)
+
 ![image]
 
 
