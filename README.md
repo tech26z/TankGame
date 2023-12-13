@@ -7,11 +7,11 @@ planet will follow the axis and stay in the same revolving plane.
 
 ![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic9.jpg)
 
-Can't use this fbx file because it will incure a large file. The file itself is 45M, but when pushs
-it to Github, it generates a big file warning message
+Can't use this fbx file because it will incure a large file. The file itself is 45M, but when pushes
+it to Github, it generates a big file warning message.
 
 ![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic10.jpg)
 
-![image]
+![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic11.png)
 
 
