@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MyTank : MonoBehaviour {
-    public float ho, ve;
+    
     [Header("Shell Prefab")]
     public GameObject shellPrefab;
 
@@ -13,10 +13,16 @@ public class MyTank : MonoBehaviour {
     [Header("Turn Speed")]
     public float turnSpeed = 1;
 
+    Transform firePoint;
+    float ho, ve;
     bool fire;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Awake()
+    {
+        firePoint = transform.Find("Barrel/FirePoint");   //find inside "this", myTank objcet
+    }
+    void Start () {
 		
 	}
 	
@@ -29,9 +35,15 @@ public class MyTank : MonoBehaviour {
         transform.position += transform.forward * Time.deltaTime * ve;
         transform.eulerAngles += new Vector3(0, ho * turnSpeed, 0);
         //transform.Rotate(0, 1 * ho, 0);
-        if (fire)
+        if (fire) //left mouse button
         {
-            Instantiate(shellPrefab, firePoint.transform.position, identity); //Prefab, position, Quaternion
+            //generate a shell. parameter:Prefab, position, Quaternion
+            GameObject shell = Instantiate(shellPrefab, firePoint.position, Quaternion.identity);
+            //shell fly direction is forward direction of "this"
+            shell.GetComponent<Shell>().flyDir = transform.forward;
+            //Destroy(shell, 3f);
         }
-	}
+
+    }
+        
 }
