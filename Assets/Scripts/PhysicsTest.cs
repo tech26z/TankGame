@@ -23,7 +23,16 @@ public class PhysicsTest : MonoBehaviour {
         {
             rig.velocity = Vector3.up * 5; //vilocity is force, not transform.position
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            rig.AddForce(Vector3.forward * 10);
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            rig.AddExplosionForce(1000, transform.position + Vector3.forward, 3);
+        }
     }
         
         
