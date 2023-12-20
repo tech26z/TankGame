@@ -16,7 +16,7 @@ public class MyTank : MonoBehaviour {
     Transform firePoint;
     float ho, ve;
     bool fire;
-
+    Vector3 totalAngles;
     // Use this for initialization
     void Awake()
     {
@@ -34,14 +34,17 @@ public class MyTank : MonoBehaviour {
 
         transform.position += transform.forward * Time.deltaTime * ve;
         transform.eulerAngles += new Vector3(0, ho * turnSpeed, 0);
+        //totalAngles += transform.eulerAngles * ho;
+        //Debug.Log(totalAngles/100);   成功实现角度累计
         //transform.Rotate(0, 1 * ho, 0);
         if (fire) //left mouse button
         {
             //generate a shell. parameter:Prefab, position, Quaternion
-            GameObject shell = Instantiate(shellPrefab, firePoint.position, Quaternion.identity);
+            GameObject shell = Instantiate(shellPrefab, firePoint.position, Quaternion.identity);           
+            Destroy(shell, 3f);
+            //Shell is script, script has both flydir and flySpeed
             //shell fly direction is forward direction of "this"
-            shell.GetComponent<Shell>().flyDir = transform.forward;
-            //Destroy(shell, 3f);
+            shell.GetComponent<Shell>().flyDir = transform.forward; 
         }
 
     }
