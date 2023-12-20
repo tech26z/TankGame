@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefab/EnemyTank.prefab.meta
-guid: d8c173e0db3c17d4dbb86832442144cb
-========
 guid: 4cc3e50090c324f4c8a6073b343e4fc1
->>>>>>>> 591c5ea9b1d6d344a3050addaebacdc9e44163b9:Assets/Prefab/BulletPrefab (1).prefab.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 100100000

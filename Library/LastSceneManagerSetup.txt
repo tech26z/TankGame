@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/TankField.unity
-=======
-- path: Assets/Scenes/ShootWall.unity
->>>>>>> 591c5ea9b1d6d344a3050addaebacdc9e44163b9
   isLoaded: 1
   isActive: 1
