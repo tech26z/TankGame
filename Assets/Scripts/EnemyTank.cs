@@ -6,7 +6,7 @@ public class EnemyTank : MonoBehaviour {
 
     public GameObject enemyTankPrefab;
     public float interval = 2f;
-    [Range(10,30)]
+    [Range(10,50)]
     public int maxEnemyTank = 20;
     float timer = 0;
     int counter = 0;
@@ -21,9 +21,10 @@ public class EnemyTank : MonoBehaviour {
 
         if(timer > interval)
         {
-            if(counter <= maxEnemyTank)
+            if(counter < maxEnemyTank)
             {
                 MakeTank();
+                counter++;
                 timer = 0;
             }
             
@@ -34,9 +35,31 @@ public class EnemyTank : MonoBehaviour {
 
     void MakeTank()
     {
-        float x = Random.Range(-40f, 40f);
-        float z = Random.Range(-40f, 40f);
+        float x = 0, z = 0;
+        Vector3 position = Vector3.zero;
 
-        Instantiate(enemyTankPrefab, new Vector3(x, 0.5f, z), Quaternion.identity);
+        do
+        {
+            x = Random.Range(-20f, 20f);
+            z = Random.Range(-20f, 20f);
+            position = new Vector3(x, 0.5f, z);
+
+        } while (!positionOK(position));
+
+        int y = Random.Range(0, 360);
+       
+        Quaternion qua =  Quaternion.Euler(new Vector3(0, y, 0));
+
+        Instantiate(enemyTankPrefab, position, qua);
+
+    }
+
+    bool positionOK(Vector3 position)
+    {
+        //~represents not check layer 8, because Plane is set at 
+        //layer 8 at the layer panel. ! represents no objects in 
+        //the sphere, otherwise, has objects
+        return !Physics.CheckSphere(position, 2, ~(1 << 8)); 
+        
     }
 }
