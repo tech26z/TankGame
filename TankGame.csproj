@@ -241,6 +241,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CamaraFollow.cs" />
     <Compile Include="Assets\Ceto\Scripts\Common\Interpolation\IInterpolatedArray2.cs" />
     <Compile Include="Assets\Ceto\Scripts\Common\Interpolation\InterpolatedArray.cs" />
     <Compile Include="Assets\Ceto\Scripts\Common\Interpolation\InterpolatedArray2f.cs" />
@@ -351,6 +352,7 @@
     <Compile Include="Assets\Scripts\PhysicsTest.cs" />
     <Compile Include="Assets\Scripts\RayCastTest.cs" />
     <Compile Include="Assets\Scripts\Shell.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TriggerTest.cs" />
   </ItemGroup>
   <ItemGroup>

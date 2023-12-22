@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 451985144}
   - component: {fileID: 451985143}
   - component: {fileID: 451985142}
+  - component: {fileID: 451985146}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -187,12 +188,67 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451985141}
-  m_LocalRotation: {x: 0.21609108, y: -0.0000030696388, z: 0.0000005855181, w: 0.97637326}
-  m_LocalPosition: {x: 5.4392447, y: 13.340851, z: -33.535408}
+  m_LocalRotation: {x: 0.24673682, y: 0.0014478266, z: -0.00036877714, w: 0.96908146}
+  m_LocalPosition: {x: 7.309482, y: 11.029876, z: -27.586533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451985146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451985141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57df094b82c629b4cada9f70b808ce7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &559393262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 559393264}
+  - component: {fileID: 559393263}
+  m_Layer: 0
+  m_Name: EnemyTank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559393263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559393262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03821eae4f8cf274995afc69f879ae16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTankPrefab: {fileID: 1672636184228670, guid: d8c173e0db3c17d4dbb86832442144cb,
+    type: 2}
+  interval: 2
+  maxEnemyTank: 20
+--- !u!4 &559393264
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559393262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.394101, y: -4.3788314, z: 0.71154785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648243768
 GameObject:
@@ -519,7 +575,7 @@ Transform:
   - {fileID: 648243769}
   - {fileID: 1835855844}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.224, y: 22.286001, z: 0.40300003}
 --- !u!54 &1336130308
 Rigidbody:
@@ -667,50 +723,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835855843}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1989512241
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1989512243}
-  - component: {fileID: 1989512242}
-  m_Layer: 0
-  m_Name: EnemyTank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1989512242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989512241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03821eae4f8cf274995afc69f879ae16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTankPrefab: {fileID: 1672636184228670, guid: d8c173e0db3c17d4dbb86832442144cb,
-    type: 2}
-  interval: 2
-  maxEnemyTank: 20
---- !u!4 &1989512243
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989512241}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.438876, y: -4.433717, z: 4.653348}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140130424
 GameObject:
   m_ObjectHideFlags: 0
