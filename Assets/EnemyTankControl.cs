@@ -15,9 +15,8 @@ public class EnemyTankControl : MonoBehaviour {
     RaycastHit hit;
     Transform firePoint;
     float timer;
-
-    
-
+    float y;
+  
     private void Awake()
     {
         tank = GameObject.FindWithTag("MyTank").transform;
@@ -43,7 +42,8 @@ public class EnemyTankControl : MonoBehaviour {
         }
         else
         {
-            //roaming
+            //
+            Roaming();
         }
 	}
 
@@ -82,10 +82,11 @@ public class EnemyTankControl : MonoBehaviour {
         if(timer > fireInterval)
         {
             GameObject shell = Instantiate(shellPrefab, firePoint.position, Quaternion.identity);
+            
             Destroy(shell, 3f);
             //Shell is script, script has both flydir and flySpeed
             //shell fly direction is forward direction of "this"
-            shell.GetComponent<Shell>().flyDir = transform.forward * shellFlySpeed;
+            shell.GetComponent<Shell>().flyDir = transform.forward;
             timer = 0;
 
         }
@@ -101,6 +102,23 @@ public class EnemyTankControl : MonoBehaviour {
     }
 
     void Roaming()
+    {
+        transform.position += transform.forward * Time.deltaTime * moveSpeed;
+        
+        if (timer > fireInterval)
+        {
+            //Debug.Log(timer);
+             y = Random.Range(0, 360);
+            Debug.Log(y);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.up * y), 0.5f);
+            
+            timer = 0;           
+        }       
+        
+    }
+           
+
+    void Rotate(Quaternion targetQU)
     {
 
     }
