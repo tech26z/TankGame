@@ -20,5 +20,8 @@ don't down load the TankGam.exe file. you may also download the whole package an
 
 some fancy stuff such as sound and UI. 
 
+this is the screenshot:
+![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic12.jpg)
+
 
 
