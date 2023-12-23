@@ -14,4 +14,11 @@ it to Github, it generates a big file warning message.
 
 ![image](https://github.com/tech26z/tech26z.github.io/blob/main/Photo/pic11.png)
 
+2023-12-23 the game is down. down load the TankTame.rar file from https://github.com/tech26z/TankGame/
+
+don't down load the TankGam.exe file. you may also download the whole package and modify it or add
+
+some fancy stuff such as sound and UI. 
+
+
 
