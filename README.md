@@ -19,6 +19,6 @@ This is the webgl version of the tank game:
 
 https://tech26z.github.io/TankGame/webgl/
 
-![
+![image](.webgl/tankGame.png)
 
 
